@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSTERDESIGNER</title>
+    <link rel="stylesheet" href="Plakatdesigner.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Momo+Signature&family=Noto+Sans+Syriac+Western:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="Hintergrund">
+
+
+
+
+        <div id="Plakat">
+            <div class="textBox" id="Text1"></div>
+        </div>
+
+        <div id="DynamicPanels"></div>
+        
+        <div id="Überschrift">
+            <div id="posterdesigner">POSTERDESIGNER</div>
+            <div id="Infotext">
+                CREATE <br>
+                YOUR <br>
+                OWN <br>
+                FONT-BASED <br>
+                POSTER <br>
+                <br>
+                CREATED <br>
+                BY <br>
+                NILS <br>
+                VOLLMÜLLER
+            </div>
+        </div>
+
+        <div id="Einstellungen">
+            <div id="ETF">OPTIONS</div>
+            <div class="Beschreibung" id="PlakatgrößeText">Poster Size</div>
+            <select id="Plakatgröße" onchange="ratioChange()">
+                <option>9 / 16</option>
+                <option>2 / 3</option>
+                <option>3 / 4</option>
+                <option>1 / 1</option>
+                <option>3 / 2</option>
+            </select>
+
+            <div class="Beschreibung" id="Hintergrundfarbe">Background</div>
+            <input id="HintergrundFarbwahl" type="color" value="#9DC4F0">
+            <div class="Beschreibung" id="GBg">Use Gradient: <input id="GB" type="checkbox"></div>
+            <div id="GradientControls">
+                <input id="Gradientfarbe1" type="color" value="#B3BAC2">
+                <input id="Gradientfarbe2" type="color" value="#FFFFFF">
+            </div>
+
+            
+            <button id="AddTextBtn">Add Text</button>
+            <button id="AddImageBtn">Add Image</button>
+            <button id="AddLogoBtn">Add Logo</button>
+            <button id="ExportBtn" onclick="exportPoster()">Export</button>
+
+        </div>
+
+    
+    </div>
+
+
+
+
+
+<script src="Plakatdesigner_script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</body>
+
+</html>

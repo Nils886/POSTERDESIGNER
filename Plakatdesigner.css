@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'obwf';
+    src: url('Fonts/outward-borders-webfont.woff2') format('woff2'),
+         url('Fonts/outward-borders-webfont.woff') format('woff'),
+         url('Fonts/outward-borders-webfont.ttf') format('truetype');
+
+}
+
+
+body{
+    background-color: rgb(37, 36, 36);
+}
+
+.Beschreibung{
+    font-size: 18px;
+    left:-1px;
+}
+
+
+
+#Plakat{
+    position:fixed;
+    background-color: rgb(157, 196, 240);
+    height: 96vh;
+    left: 54vh;
+    overflow: hidden;
+    aspect-ratio: 9 / 16;
+    top: 2vh;
+}
+
+
+
+
+
+
+
+#Überschrift{
+    background-color: rgb(157, 196, 240);
+    position:fixed;
+    top: 2vh;
+    left: 110vh;
+    height: 96vh;
+    width: 80vh;
+    overflow: hidden;
+}
+#posterdesigner{ font-family: 'obwf';position: absolute;  transform: rotate(-90deg); font-size: 38vh; top:31vh; left:-31vh; }
+#Infotext{ position: absolute; top: -4vh; left: -6px; width: 70vh; font-size: 6vh; line-height: 84px; letter-spacing: 20px;}
+
+
+
+
+
+
+
+#Einstellungen{
+    position:fixed;
+    background-color: rgb(157, 196, 240);
+    height: 28vh;
+    width: 50vh;
+    top: 2vh;
+    left: 2vh;
+    overflow: hidden;
+    z-index: 10;}
+
+
+#ETF{ font-family: 'obwf'; position: absolute; left: -2px; top:3px; font-size: 38vh; }
+#AddTextBtn{ position: absolute; top: 22vh; left: 2vh; width: 12vh;}
+#AddImageBtn{ position: absolute; top: 22vh; left: 18vh; width: 13vh;}
+#AddLogoBtn{ position: absolute; top: 22vh; left: 35vh; width: 12vh}
+#ExportBtn{position: absolute; width: 12vh; left: 35vh; top: 4vh;}
+#PlakatgrößeText{ position: absolute; top:7vh; }
+#Plakatgröße{ position: absolute; top:7vh; left:18vh; }
+#Hintergrundfarbe{ position: absolute; top:11vh; }
+#HintergrundFarbwahl{ position: absolute; top:11vh; left:18vh; height: 3vh; }
+#GBg{position:absolute; top:15vh;}
+#GradientControls{position:absolute;top:15vh;left:18vh;}
+#Gradientfarbe1, #Gradientfarbe2{height:3vh;}
+
+
+
+
+
+
+
+
+
+/* lines in text boxes */
+#Text1 > .line, #Text2 > .line, #Text3 > .line { display: block; margin-top: 1vh; }
+
+/* Dynamic panel styles */
+.dynamicPanel { 
+        background-color: rgb(157, 196, 240);
+        color: #000000;
+        font-size: 18px;
+        padding: 0.6vh 0.8vh;
+        border-radius: 6px;
+        margin-bottom: 0.8vh;
+}
+
+.dynamicPanel strong { display:block; font-size:3.2vh; color:#000000; margin-bottom:0.6vh }
+.dynamicPanel input[type="range"], .dynamicPanel input[type="text"], .dynamicPanel select, .dynamicPanel input[type="number"] { width: 100%; font-size:2.2vh; margin:0.4vh 0; }
+.dynamicPanel input[type="color"] { width: 3.6vh; height: 3.6vh; padding:0; border:none; }
+.dynamicPanel button { font-size:2.2vh; margin-right:0.6vh; font-family: 'Oswald', sans-serif; }
+
+button { font-family: 'Oswald', sans-serif; }
+
+/* sliders: make track and thumb black */
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #000;
+    border-radius: 8px;
+    border: 1px solid #fff;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #000;
+    border-radius: 50%;
+}
+input[type=range]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #000;
+    border-radius: 50%;
+}
+
+/* inside dynamic panels, inputs should be readable */
+.dynamicPanel input, .dynamicPanel select { color: #000; }
+
+/* Container to mimic original left-side panels */
+#ControlActions { display:flex; gap:0.8vh; align-items:center }
+#DynamicPanels {
+    position: absolute;
+    top: 32vh;
+    left: 2vh;
+    width: 50vh;
+    max-height: 80vh;
+    overflow: auto;
+    color: #000000;
+    box-sizing: border-box;
+    padding: 1vh;
+}
+
+/* Styling for dynamic poster elements added via buttons */
+
+.textBox {
+    pointer-events: none;
+    white-space: nowrap;
+    text-align: center;
+    color: #000;
+    font-size: 6vh;
+}
+
+/* Weiße Kontur für alle wichtigen Texte */
+
+#Infotext, .Beschreibung, .dynamicPanel {
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000,
+        -2px  0px 0 #000,
+         2px  0px 0 #000,
+         0px  2px 0 #000,
+         0px -2px 0 #000;
+}
+
+/* Strong elements in dynamic panels: black without outline */
+.dynamicPanel strong {
+    color: #000;
+    text-shadow: none;
+}
+
+/* Any container created for images/logos ends with "-container"; style images/SVGs inside */
+[id$="-container"] img, [id$="-container"] svg {
+    display: block;
+    max-width: none;
+    max-height: none;
+}
+
+[id$="-container"] {
+    pointer-events: none;
+}
+
